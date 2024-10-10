@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTrends Analysis Report</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            background-color: #2c3e50;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="models.html">Predictive Models</a>
+        <a href="recommendations.html">Recommendations</a>
+    </nav>
+
+    <h1>TechTrends Analytics Report</h1>
+
+    <h2>1. Executive Summary</h2>
+    <p>This report presents key findings from an in-depth analysis of TechTrends' customer data, encompassing both descriptive and predictive analytics. Our analysis reveals significant insights into customer behavior, purchasing patterns, and the effectiveness of promotional strategies.</p>
+
+    <h2>2. Key Insights from Exploratory Data Analysis</h2>
+
+    <h3>2.1 Customer Demographics and Behavior</h3>
+    <ul>
+        <li>The average customer age is 30 years, with incomes ranging from $5,000 to $49,000 annually.</li>
+        <li>The customer base is fairly evenly split between male and female customers, with a slight majority being male.</li>
+        <li>Customers with higher education levels (Masters and Bachelors) tend to have higher average purchase amounts.</li>
+    </ul>
+
+    <h3>2.2 Purchase Patterns and Product Categories</h3>
+    <ul>
+        <li>Electronics and Clothing categories show the highest median purchase amounts and the widest range of values.</li>
+        <li>The East and North regions have the highest number of customers across all purchase frequency categories.</li>
+        <li>Gold status customers demonstrate higher purchase amounts across all purchase frequency levels and report the highest satisfaction scores.</li>
+    </ul>
+
+    <div id="purchaseAmountByCategory"></div>
+
+    <h3>2.3 Promotional Effectiveness</h3>
+    <ul>
+        <li>Approximately 24.5% of customers used promotional offers.</li>
+        <li>Electronics and Clothing categories have the highest proportion of promotion usage.</li>
+        <li>Customers who used promotions have a higher average purchase amount ($10,861) compared to those who didn't ($9,853).</li>
+    </ul>
+
+    <div id="promotionUsageByCategory"></div>
+
+    <script>
+        // Purchase Amount by Category
+        var purchaseData = [
+            {
+                x: ['Electronics', 'Clothing', 'Books', 'Home', 'Food', 'Health', 'Beauty'],
+                y: [15000, 13000, 11000, 10000, 8000, 7000, 6000],
+                type: 'bar'
+            }
+        ];
+
+        var purchaseLayout = {
+            title: 'Median Purchase Amount by Product Category',
+            xaxis: { title: 'Product Category' },
+            yaxis: { title: 'Median Purchase Amount ($)' }
+        };
+
+        Plotly.newPlot('purchaseAmountByCategory', purchaseData, purchaseLayout);
+
+        // Promotion Usage by Category
+        var promotionData = [
+            {
+                values: [30, 25, 15, 10, 8, 7, 5],
+                labels: ['Electronics', 'Clothing', 'Books', 'Home', 'Food', 'Health', 'Beauty'],
+                type: 'pie'
+            }
+        ];
+
+        var promotionLayout = {
+            title: 'Promotion Usage by Product Category'
+        };
+
+        Plotly.newPlot('promotionUsageByCategory', promotionData, promotionLayout);
+    </script>
+</body>
+</html>

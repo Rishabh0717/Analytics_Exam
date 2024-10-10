@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTrends Predictive Models</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            background-color: #2c3e50;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="models.html">Predictive Models</a>
+        <a href="recommendations.html">Recommendations</a>
+    </nav>
+
+    <h1>Predictive Models and Their Implications</h1>
+
+    <h2>1. Purchase Amount Prediction Model</h2>
+    <h3>Model Performance:</h3>
+    <ul>
+        <li>R-squared: 0.89</li>
+        <li>Mean Squared Error: 8,449,964.47</li>
+    </ul>
+    <h3>Key Predictors:</h3>
+    <ol>
+        <li>Income (Importance: 0.7032)</li>
+        <li>Age (Importance: 0.0891)</li>
+        <li>Satisfaction Score (Importance: 0.0452)</li>
+    </ol>
+    <p>Implications: This model suggests that income is by far the most important factor in determining purchase amounts. Age and customer satisfaction also play roles, but to a much lesser extent.</p>
+
+    <h2>2. Promotional Offer Usage Prediction Model</h2>
+    <h3>Model Performance:</h3>
+    <ul>
+        <li>Accuracy: 78%</li>
+        <li>Precision: 71%</li>
+        <li>Recall: 68%</li>
+        <li>F1-score: 69%</li>
+    </ul>
+    <h3>Key Predictors:</h3>
+    <ol>
+        <li>Income (Importance: 0.1724)</li>
+        <li>Purchase Amount (Importance: 0.1406)</li>
+        <li>Age (Importance: 0.1050)</li>
+    </ol>
+    <p>Implications: This model indicates that income, purchase amount, and age are the most important factors in predicting whether a customer will use promotional offers. The model's performance suggests it's a useful tool for targeting promotions, but there's room for improvement.</p>
+
+    <h2>3. Overall Implications for TechTrends</h2>
+    <p>These models provide valuable insights for TechTrends:</p>
+    <ul>
+        <li>Income-based segmentation should be a key strategy in both product offerings and promotional targeting.</li>
+        <li>Age-specific marketing and product recommendations can improve both purchase amounts and promotional effectiveness.</li>
+        <li>While satisfaction scores impact purchase amounts, they're less crucial for promotional strategies, suggesting different approaches may be needed for increasing sales versus promoting offers.</li>
+        <li>The strong link between purchase amounts and promotional usage suggests that targeting big spenders with promotions could be particularly effective.</li>
+    </ul>
+    <p>By leveraging these insights, TechTrends can optimize its marketing strategies, improve customer targeting, and ultimately drive sales growth.</p>
+</body>
+</html>
